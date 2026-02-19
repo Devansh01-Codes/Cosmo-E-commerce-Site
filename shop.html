@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Latest Anime cosplay dresses.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar flex">
+        <div class="logo">
+            <img src="images/cosmo.png" alt="cosmo">
+        </div>
+        <div class="navcontent">
+            <ul class="flex">
+             <li><a href="index.html">Home</a></li>
+             <li class="dropdown">
+              <a class="active" href="shop.html">Shop</a>
+             <ul class="dropdown-menu">
+              <li><a href="shop.html?category=men">Men</a></li>
+              <li><a href="shop.html?category=women">Women</a></li>
+              <li><a href="shop.html?category=figures">Action Figures</a></li>
+              <li><a href="shop.html?category=others">wigs</a></li>
+              <li><a href="shop.html?category=others">weapons</a></li>
+            </ul>
+         </li>                 
+             <li><a href="about.html">about us</a></li>
+             <li><a href="contact.html">contact us</a></li>
+             <li><a href="cart.html">cart<i class="fa-solid fa-cart-shopping"></i></a></li>
+           
+            </ul>
+        </div>
+        <div class="searchbar flex">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search you favourite dress">
+        </div>
+
+        <div class="user-login">
+            <button class="signin-btn btn-normal">
+               <i class="fa-solid fa-user"></i>
+               Login 
+               <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="signin-content">
+                <div class="signup flex">
+                  <p>New customer?</p>
+                  <button class="btn-normal power-btn">Sign up</button>
+                </div>
+               </div>
+              </div>
+              <div class="hamburger">
+                <img src="images/hamburger.svg" alt="">
+              </div>
+    </nav>
+
+</header>
+<!-- <div class="shop-header">
+
+  <select class="sort-selection capsule">
+    <option>clothing</option>
+    <option>Accesseries</option>
+    <option>Toys</option>
+  </select>
+  <button>New Arrivals</button>
+  <input type="text" placeholder="Search....">
+
+</div> -->
+
+<div class="shop-hero">
+
+<div class="shophero-content">
+ <span>collections</span>
+<h2>Here's your favorite outfits </h2>
+<p>Your dream wardrobe, delivered. Explore our latest collections and discover why we are the go-to destination for the season's most-wanted styles."</p>
+</div>
+</div>
+
+<div class="shop-title">
+  <div class="main-heading">
+    <span><a href="index.html">Home</a>><a href="shop.html"> shop</a>><a href="#">clothing</a> </span>
+    <h2>Shop Collection</h2>
+  </div>
+  <select class="sort-selection">
+    <option>Newest</option>
+    <option>Price: Low to High</option>
+    <option>Price: High to Low</option>
+  </select>
+</div>
+  
+<div class="shop-section">
+
+  <div class="filter">
+    <div class="filter-head">
+      <h2>FILTER</h2>
+      <img id="close-filter" src="images/close.svg" alt="">
+    </div>
+
+<div class="filter-category filter-blocks">
+  <h3>category</h3>
+<div class="options">
+  <label class="filter-option">
+    <input type="checkbox" data-type="category" data-value="all">
+    <span>ALL</span>
+  </label>
+  <label class="filter-option">
+    <input type="checkbox" data-type="category" data-value="men">
+    <span>Men</span>
+  </label>
+  <label class="filter-option">
+    <input type="checkbox" data-type="category" data-value="women">
+    <span>Women</span>
+  </label>
+  <label class="filter-option">
+    <input type="checkbox" data-type="category" data-value="figures">
+    <span>Action Figures</span>
+  </label>
+  <label class="filter-option">
+    <input type="checkbox" data-type="category" data-value="others">
+    <span>mask & weapons</span>
+  </label>
+</div>
+  <button>Show More</button>
+
+</div>
+  <div class="top-brands filter-blocks">
+    <h3>Top Anime</h3>
+  <div class="options">
+    <label class="filter-option">
+      <input type="checkbox" data-type="brands" data-value="one piece">
+      <span>One Piece</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" data-type="brands" data-value="naruto">
+      <span>Naruto</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" data-type="brands" data-value="DS">
+      <span>Demon Slayer</span>
+
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" data-type="brands" data-value="others">
+      <span>others</span>
+    </label>
+    </div>
+    <button>Show More</button>
+
+</div>
+ 
+  
+  </div>
+  <div class="mobile-filter">
+    <button class="btn-normal" id="mobile-filter">Filter</button>
+  </div>
+  
+  <div class="shop-collection" id="shop-top">
+    <div class="shop-container">
+
+    </div>
+      <div class="page-result">
+        <span>Showing Result 0 of 15</span>
+      </div>
+    <div class="pagination">
+      
+      <div id="prev">Prev</div>
+      
+      <div class="pages"></div>
+      
+      <div id="next">Next</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="section-padding">
+  
+  <div class="col">
+    <img src="images/cosmo.png" alt="">
+  <h4>Contact</h4>
+  <p><strong>Address:</strong> 001 Upper Rajiv Nagar, Dharampur , dehradun</p>
+ <p><strong>Phone:</strong> 01-2223-305  / (+91) 853 125 7534</p>
+ <p><strong>hours:</strong> 10:00Am-10:00pm</p>
+ 
+ <div class="follow">
+   <h4>Follow us</h4>
+   <div class="icons">
+     <i class="fab fa-facebook"></i>
+     <i class="fab fa-twitter"></i>
+     <i class="fab fa-instagram"></i>
+     <i class="fab fa-youtube"></i>
+    </div>
+  </div>
+
+</div>
+
+<div class="col">
+  <h4>About</h4>
+  <a href="about.html">About us</a>
+  <a href="#">Delivery information</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Terms & Conditions</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+<div class="col">
+  <h4>My Account</h4>
+  <a href="#">Sign in</a>
+  <a href="cart.html">View Cart</a>
+  <a href="#">my Wishlist</a>
+  <a href="#">Track My Order</a>
+  <a href="#">Help</a>
+</div>
+
+</footer>
+</body>
+<script src="script.js"></script>
+</html>

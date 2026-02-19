@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choose Your product to ad on cart</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar flex">
+        <div class="logo">
+            <img src="images/cosmo.png" alt="cosmo">
+        </div>
+        <div class="navcontent">
+            <ul class="flex">
+             <li><a href="index.html">Home</a></li>
+             <li class="dropdown">
+              <a class="active" href="shop.html">Shop</a>
+             <ul class="dropdown-menu">
+              <li><a href="shop.html?category=men">Men</a></li>
+              <li><a href="shop.html?category=women">Women</a></li>
+              <li><a href="shop.html?category=figures">Action Figures</a></li>
+              <li><a href="shop.html?category=others">wigs</a></li>
+              <li><a href="shop.html?category=others">weapons</a></li>
+            </ul>
+         </li>                 
+             <li><a href="about.html">about us</a></li>
+             <li><a href="contact.html">contact us</a></li>
+             <li><a href="cart.html">cart<i class="fa-solid fa-cart-shopping"></i></a></li>
+           
+            </ul>
+        </div>
+        <div class="searchbar flex">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search you favourite dress">
+        </div>
+
+        <div class="user-login">
+            <button class="signin-btn btn-normal">
+               <i class="fa-solid fa-user"></i>
+               Login 
+               <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="signin-content">
+                <div class="signup flex">
+                  <p>New customer?</p>
+                  <button class="btn-normal power-btn">Sign up</button>
+                </div>
+               </div>
+              </div>
+              <div class="hamburger">
+                <img src="images/hamburger.svg" alt="">
+              </div>
+    </nav>
+
+</header>
+<main>
+  <div class="product-header">
+    <a href="index.html">Home</a>/ product Details
+  </div>
+   <section>
+   <div class="product-display">
+
+     <div class="product-images">
+       <div class="main-image">
+         <img src="images/women-model.jpg" alt="poduct">
+        </div>
+        <div class="product-subimages">
+          
+          <img src="images/women-model.jpg" alt="poduct">
+          <img src="images/women-model.jpg" alt="poduct">
+          <img src="images/women-model.jpg" alt="poduct">
+        </div>
+      </div>
+      <div class="product-alldetails">
+        <div class="prod-details">
+
+          <span>spider women</span>
+          <h1>zGwen Spidy Suit</h1>
+          <p>$237</p>
+        </div>
+
+        <div class="size">
+          <span>Select size</span>
+          <div class="size-btns">
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>xL</button>
+            <button>XXL</button>
+          </div>
+        </div>
+        <button id="add-to-cart">Add to cart</button>
+        <div class="description">
+          <h3>Description</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat veritatis eius dolore! Magnam nulla animi nisi suscipit tenetur porro ipsum libero corporis nesciunt? Delectus, dolores!</p>
+        </div>
+      </div>
+      
+    </div>
+
+    </section>
+
+    <section class="ratings-section">
+      <h1>Ratings & Reviews</h1>
+      <div class="rate-rev-container">
+      <div class="ratings">
+        <div class="overall-rating">
+         <h2>4.5 <span>/5</span></h2>
+         <span>(50 new reviews)</span>
+        </div>
+        <div class="rating-data">
+          <div class="rating-row">
+            <i class="fas fa-star"></i>
+             <p>5</p>
+              <div class="bar">
+                <div class="fill" style="width: 80%;"></div>
+              </div>
+          </div>
+          <div class="rating-row">
+            <i class="fas fa-star"></i>
+             <p>4</p>
+              <div class="bar">
+                <div class="fill" style="width: 60%;"></div>
+              </div>
+          </div>
+          <div class="rating-row">
+            <i class="fas fa-star"></i>
+             <p>3</p>
+              <div class="bar">
+                <div class="fill" style="width: 35%;"></div>
+              </div>
+          </div>
+          <div class="rating-row">
+            <i class="fas fa-star"></i>
+             <p>2</p>
+              <div class="bar">
+                <div class="fill" style="width: 20%;"></div>
+              </div>
+          </div>
+          <div class="rating-row">
+            <i class="fas fa-star"></i>
+             <p>1</p>
+              <div class="bar">
+                <div class="fill" style="width: 10%;"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="review-card">
+        <h2>Alex mathio</h2>
+        <div class="user-reviews">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>13 oct 2025</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia vel ratione nesciunt quasi nulla magnam? At natus, mollitia ab illum sint, reiciendis omnis consectetur quod minima rem deserunt temporibus nobis.</p>
+        <img src="images/1 (1).png" alt="">
+        <button id="next-review"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="bar">
+          <div class="fill" style="width: 20%;"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+
+
+    <div class="recommended-products">
+      <h1>You Might also like</h1>
+      <div class="recommended-product-container">
+        <div class="item">
+          
+      </div>
+    </div>
+</main>
+
+<footer class="section-padding">
+  
+  <div class="col">
+    <img src="images/cosmo.png" alt="">
+  <h4>Contact</h4>
+  <p><strong>Address:</strong> 001 Upper Rajiv Nagar, Dharampur , dehradun</p>
+ <p><strong>Phone:</strong> 01-2223-305  / (+91) 853 125 7534</p>
+ <p><strong>hours:</strong> 10:00Am-10:00pm</p>
+ 
+ <div class="follow">
+   <h4>Follow us</h4>
+   <div class="icons">
+     <i class="fab fa-facebook"></i>
+     <i class="fab fa-twitter"></i>
+     <i class="fab fa-instagram"></i>
+     <i class="fab fa-youtube"></i>
+    </div>
+  </div>
+
+</div>
+
+<div class="col">
+  <h4>About</h4>
+  <a href="about.html">About us</a>
+  <a href="#">Delivery information</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Terms & Conditions</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+<div class="col">
+  <h4>My Account</h4>
+  <a href="#">Sign in</a>
+  <a href="cart.html">View Cart</a>
+  <a href="#">my Wishlist</a>
+  <a href="#">Track My Order</a>
+  <a href="#">Help</a>
+</div>
+
+</footer>
+</body>
+<script src="script.js"></script>
+</html>
