@@ -144,6 +144,16 @@ left.addEventListener("click",()=>{
 })
   
 }
+
+function capitalizeWords(str) {
+  if(!str) return;
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 function updateSliderButtons(left, right) {
     left.disabled=currentIndex === 0;
     right.disabled=currentIndex + itemsPerPage >= productdata.length;
@@ -166,7 +176,10 @@ function updateSliderButtons(left, right) {
   visibleProducts.forEach(data=>{
     const product = document.createElement("div");
     product.classList.add("product-card");
+
   let random = Math.floor(Math.random()*(7999-5999 +1))+5999;
+  let productTitle = capitalizeWords(data.title);
+  let productSubtitle = capitalizeWords(data.subtitle);
     product.innerHTML=`
     <div class="product-image">
         <img src="images/${data.img}" alt="image">
@@ -174,8 +187,8 @@ function updateSliderButtons(left, right) {
       </div>
       
       <div class="product-content">
-        <h6>${data.subtitle}</h6>
-        <h4>${data.title}</h4>
+        <h6>${productSubtitle}</h6>
+        <h4>${productTitle}</h4>
         <div class="star">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -187,16 +200,22 @@ function updateSliderButtons(left, right) {
       </div>
       <div class="btns">
         <button class="btn-normal">Buy Now</button>
-        <button class="btn-normal">Add to cart</button> 
+        <button class="btn-normal add-to-cart">Add to cart</button>
+
       </div>
     `
     productContainer.appendChild(product)
-    product.addEventListener("click",()=>{
+    const image = product.querySelector("img")
+    const addCart = product.querySelector(".add-to-cart")
+    image.addEventListener("click",()=>{
       window.location.href= `product.html?id=${data.id}`
+    });
+    addCart.addEventListener("click",()=>{
+    addItemToCart(data);
+    addCart.textContent="Added"
     })
-  })
-
-
+   
+  });
   requestAnimationFrame(()=>{
     productContainer.style.transition = "transform 0.8s ease"
       productContainer.style.transform = "translateX(0)"
@@ -204,11 +223,24 @@ function updateSliderButtons(left, right) {
 
 }
 
+function addItemToCart(product){
+ if (product && product.id) {
+  let cart = JSON.parse(localStorage.getItem("cart"))||[];
+  const exists =  cart.find(item => item.id ===product.id)
+  if(exists){
+   exists.qty += 1;
+  }else{
+   cart.push({...product, qty: 1});
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
+
+}
 
 
 const newarrivals=[
-  {id:10,img:"nezuko.png",title:"nezuko kimono dress",subtitle:"DS",price:1999,category:"women",subimg:["nezuko.png","nezuko.png","nezuko.png"]},
+  {id:10,img:"nezuko.png",title:"Nezuko Kimono dress",subtitle:"DS",price:1999,category:"women",subimg:["nezuko.png","nezuko.png","nezuko.png"]},
   {id:14,img:"naruto-1.png",title:"Naruto shippudin dress", subtitle:"naruto",price:"3499",category:"men",subimg:["naruto-1.png","naruto-2.png","naruto-3.png"]},
   {id:25,img:"inosuke-fig.png",title:"inosuke action figure", subtitle:"DS",price:"799",category:"figures",subimg:[]},
   {id:40,img:"action-figure1.jpg",title:"Giyu action figures",subtitle:"DS" ,price:"599",category:"figures",subimg:[]},
@@ -230,13 +262,17 @@ newarrivals.forEach(data=>{
 
   const newProduct = document.createElement("div");
   newProduct.classList.add("newproduct-card")
+
+  let productTitle = capitalizeWords(data.title);
+  let productSubtitle = capitalizeWords(data.subtitle);
+
   newProduct.innerHTML=`
   <div class="newproduct-image">
         <img src="images/${data.img}" alt="Nezuko">
       </div>
       <div class="newproduct-content">
-        <span>${data.subTitle}</span>
-        <h4>${data.title}</h4>
+        <span>${productSubtitle}</span>
+        <h4>${productTitle}</h4>
       </div>
       <div class="badge">NEW</div>
   `
@@ -486,18 +522,23 @@ else prevBtn.style.display = "inline-block";
 if (state.page === totalPages) nextBtn.style.display = "none";
 else nextBtn.style.display = "inline-block";
 
+
 items.slice(start,end).forEach(item=>{
   const itemCard = document.createElement("div")
   itemCard.classList.add("item-card")
+
   let random = Math.floor(Math.random()*(7999-5999 +1))+5999;
+  let productSubtitle = capitalizeWords(item.subtitle);
+  let productTitle = capitalizeWords(item.title);
+
   itemCard.innerHTML=`
                   <div class="item-image">
                   <img src="images/${item.img}" loading="lazy" alt="image">
                   </div>
                 
                 <div class="item-content">
-                  <span>${item.subtitle}</span>
-                  <h4>${item.title}</h4>
+                  <span>${productSubtitle}</span>
+                  <h4>${productTitle}</h4>
                   <div class="star">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -621,8 +662,8 @@ if(product.category==="figures"){
   
 description.textContent = `${product.title} of ${product.subtitle} is a premium-quality item designed for style, comfort, and durability. Ideal for fans and collectors, it adds uniqueness to your collection or wardrobe.`
 
-  brand.textContent= product.subtitle
-  productName.textContent= product.title
+  brand.textContent= capitalizeWords(product.subtitle) 
+  productName.textContent= capitalizeWords(product.title)
   productPrice.textContent=  `Rs ${product.price}`
  
   const recommProducts = document.querySelector(".recommended-product-container")
@@ -631,13 +672,16 @@ description.textContent = `${product.title} of ${product.subtitle} is a premium-
     recommendedItems.forEach(recomitem=>{
       const item = document.createElement("div");
       item.classList.add("item");
+
+      let productTitle = capitalizeWords(recomitem.title);
+
       item.innerHTML=`
       <div class="item-img">
       <img src="images/${recomitem.img}" alt="image">
       </div>
       
       <div class="item-cont">
-      <h4>${recomitem.title}</h4>
+      <h4>${productTitle}</h4>
             <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -658,20 +702,19 @@ description.textContent = `${product.title} of ${product.subtitle} is a premium-
             
             addToCart.addEventListener("click",()=>{
               
-              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+              // let cart = JSON.parse(localStorage.getItem("cart")) || [];
               
-              if (product && product.id) {
-                const exists = cart.find(item => item.id === product.id);
-                if (exists) {
-                  exists.qty += 1;
-                } else {
-                  cart.push({ ...product, qty: 1 });
-                }
-              }
+              // if (product && product.id) {
+              //   const exists = cart.find(item => item.id === product.id);
+              //   if (exists) {
+              //     exists.qty += 1;
+              //   } else {
+              //     cart.push({ ...product, qty: 1 });
+              //   }
+              addItemToCart(product)
               addToCart.textContent="added ✓";
               addToCart.disabled=true;
               
-              localStorage.setItem("cart", JSON.stringify(cart));
               
             })
             
@@ -793,4 +836,3 @@ taxEl.textContent = `Rs ${tax}`;
 totalEl.textContent = `Rs ${total}`;
 
 }
-
