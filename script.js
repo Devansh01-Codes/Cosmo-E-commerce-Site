@@ -105,7 +105,7 @@ const productdata =[
   {id:19,img:"tanjiro-1.jpg",title:"tanjiro cosplay dress",subtitle:"Demon slayer",price:1999,category:"men"},
   {id:12,img:"yamato-1.jpg",title:"yamato full dress",subtitle:"Demon slayer",price:3499,category:"women",},
   {id:31,img:"inosuke-mask.jpg",title:"inosuke real Mask", subtitle:"Demon slayer",price:"3999",category:"others"},
-  {id:22,img:"Minato-1.jpg",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men"},
+  {id:22,img:"minato-1.jpg",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men"},
   
   {id:15,img:"zenitsu-3.jpg",title:"zenitsu kimono Dress",subtitle:"Demon slayer",price:3499,category:"men"},
   {id:13,img:"goku-1.jpg",title:"Goku classic dress", subtitle:"dragon ball",price:"4999",category:"men"},
@@ -331,7 +331,7 @@ const shopItems =[
   {id:20,img:"itachi.jpg",title:"Itachi akatsuki dress", subtitle:"naruto",price:"3499",category:"men",subimg:["itachi.jpg","itachi-2.jpg","itachi-3.jpg"]},
   {id:21,img:"hinata-1.jpg",title:"Shoyu hinata jersey", subtitle:"haikyu",price:"2499",category:"men",subimg:["hinata-1.jpg","hinata-2.jpg","haikyu-shorts.jpg"]},
   
-  {id:22,img:"Minato-1.jpg",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men",subimg:["Minato-1.jpg","Minato-2.jpg","Minato-1.jpg"]},
+  {id:22,img:"minato-1.jpg",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men",subimg:["minato-1.jpg","minato-2.jpg","minato-1.jpg"]},
   {id:23,img:"mikey-2.jpg",title:"Mikey Toman Jacket",subtitle:"tokyo revengers",price:2499,category:"men",subimg:["mikey-2.jpg","mikey-1.jpg","mikey-2.jpg"]},
   {id:24,img:"kageyama-1.jpg",title:"kageyama jersey 09", subtitle:"haikyu",price:"2499",category:"men",subimg:["kageyama-1.jpg","haikyu-shorts.jpg","kageyama-2.jpg"]},
   
@@ -835,5 +835,6 @@ subtotalEl.textContent = `Rs ${subtotal}`;
 shippingEl.textContent = `Rs ${shipping}`;
 taxEl.textContent = `Rs ${tax}`;
 totalEl.textContent = `Rs ${total}`;
+
 
 }
