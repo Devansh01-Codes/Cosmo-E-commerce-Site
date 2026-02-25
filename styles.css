@@ -1122,7 +1122,6 @@ padding: 0;
 
   .newsletter-form {
     width: 100%;
-    flex-direction:column;
     margin: 0;
   }
 
@@ -1268,8 +1267,9 @@ padding: 0;
       font-size: 1.4rem;
   }
   
-  .product-card:hover{
+  .cat-card:hover{
     transform: translateY(-2px);
+    box-shadow: none;
   }
   
   
@@ -1688,7 +1688,7 @@ padding: 0;
 }
 /* ================= ABOUT HERO (LIGHT) ================= */
 .about-hero {
-  background: url("images/aboutus-hero.png") center top/cover;
+  background: url("images/aboutus-hero.jpg") center top/cover;
   background-repeat: no-repeat;
   padding: 100px 8%;
 }
@@ -2237,7 +2237,7 @@ width: 100%;
     font-size: 0.95rem;
   }
 
-  /* CARDS */
+  /* CARDemon slayer */
   .cards-grid {
     padding: 40px 5%;
     gap: 20px;
@@ -2968,6 +2968,5 @@ object-fit: cover;
     width: 100%;
   }
 }
-
 
 

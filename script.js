@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 
 const allCategories=[
-  {img:"ichigo.png",title:"Men Outfits", category:"men"},
-  {img:"makima-1.png",title:"women Outfits",category:"women"},
-  {img:"law-fig.png",title:"Collectables",category:"figures"},
-  {img:"inosuke-mask.png",title:"Props ",category:"others"},
-  {img:"water-blade.png",title:"cosplay weapons",category:"others"},
+  {img:"ichigo.jpg",title:"Men Outfits", category:"men"},
+  {img:"makima-1.jpg",title:"women Outfits",category:"women"},
+  {img:"law-fig.jpg",title:"Collectables",category:"figures"},
+  {img:"inosuke-mask.jpg",title:"Props ",category:"others"},
+  {img:"water-blade.jpg",title:"cosplay weapons",category:"others"},
 ]
 function initCategories(){
   const categoryWrapper = document.querySelector(".categories");
@@ -100,19 +100,19 @@ function createCategory(wrapper){
 
 
 const productdata =[
-  {id:2,img:"zoro-1.png",title:"Zoro kimono dress ", subtitle:"one piece",price:"4999",category:"men"},
-  {id:6,img:"rem-1.png",title:"Rem cosplay Dress",subtitle:"Re zero",price:2499,category:"women"},
-  {id:19,img:"tanjiro-1.png",title:"tanjiro cosplay dress",subtitle:"DS",price:1999,category:"men"},
-  {id:12,img:"yamato-1.png",title:"yamato full dress",subtitle:"DS",price:3499,category:"women",},
-  {id:31,img:"inosuke-mask.png",title:"inosuke real Mask", subtitle:"DS",price:"3999",category:"others"},
-  {id:22,img:"Minato-1.png",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men"},
+  {id:2,img:"zoro-1.jpg",title:"Zoro kimono dress ", subtitle:"one piece",price:"4999",category:"men"},
+  {id:6,img:"rem-1.jpg",title:"Rem cosplay Dress",subtitle:"Re zero",price:2499,category:"women"},
+  {id:19,img:"tanjiro-1.jpg",title:"tanjiro cosplay dress",subtitle:"Demon slayer",price:1999,category:"men"},
+  {id:12,img:"yamato-1.jpg",title:"yamato full dress",subtitle:"Demon slayer",price:3499,category:"women",},
+  {id:31,img:"inosuke-mask.jpg",title:"inosuke real Mask", subtitle:"Demon slayer",price:"3999",category:"others"},
+  {id:22,img:"Minato-1.jpg",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men"},
   
-  {id:15,img:"zenitsu-3.png",title:"zenitsu kimono Dress",subtitle:"DS",price:3499,category:"men"},
-  {id:13,img:"goku-1.png",title:"Goku classic dress", subtitle:"dragon ball",price:"4999",category:"men"},
-  {id:4,img:"mitsuri-1.png",title:"mitsuri cosplay Dress",subtitle:"DS",price:3499,category:"women"},
-  {id:10,img:"nezuko.png",title:"nezuko kimono dress",subtitle:"DS",price:1999,category:"women"},
-  {id:1, img:"luffy-1.png",title:"Luffy classic dress", subtitle:"one piece",price:"4999",category:"men"},
-  {id:27,img:"law-fig.png",title:"inosuke action figure", subtitle:"one piece",price:"699",category:"figures"},
+  {id:15,img:"zenitsu-3.jpg",title:"zenitsu kimono Dress",subtitle:"Demon slayer",price:3499,category:"men"},
+  {id:13,img:"goku-1.jpg",title:"Goku classic dress", subtitle:"dragon ball",price:"4999",category:"men"},
+  {id:4,img:"mitsuri-1.jpg",title:"mitsuri cosplay Dress",subtitle:"Demon slayer",price:3499,category:"women"},
+  {id:10,img:"nezuko.jpg",title:"nezuko kimono dress",subtitle:"Demon slayer",price:1999,category:"women"},
+  {id:1, img:"luffy-1.jpg",title:"Luffy classic dress", subtitle:"one piece",price:"4999",category:"men"},
+  {id:27,img:"law-fig.jpg",title:"inosuke action figure", subtitle:"one piece",price:"699",category:"figures"},
     
   ]
   
@@ -179,7 +179,7 @@ function updateSliderButtons(left, right) {
 
   let random = Math.floor(Math.random()*(7999-5999 +1))+5999;
   let productTitle = capitalizeWords(data.title);
-  let productSubtitle = capitalizeWords(data.subtitle);
+  let productsubtitle = capitalizeWords(data.subtitle);
     product.innerHTML=`
     <div class="product-image">
         <img src="images/${data.img}" alt="image">
@@ -187,7 +187,7 @@ function updateSliderButtons(left, right) {
       </div>
       
       <div class="product-content">
-        <h6>${productSubtitle}</h6>
+        <h6>${productsubtitle}</h6>
         <h4>${productTitle}</h4>
         <div class="star">
         <i class="fas fa-star"></i>
@@ -240,12 +240,12 @@ function addItemToCart(product){
 
 
 const newarrivals=[
-  {id:10,img:"nezuko.png",title:"Nezuko Kimono dress",subtitle:"DS",price:1999,category:"women",subimg:["nezuko.png","nezuko.png","nezuko.png"]},
-  {id:14,img:"naruto-1.png",title:"Naruto shippudin dress", subtitle:"naruto",price:"3499",category:"men",subimg:["naruto-1.png","naruto-2.png","naruto-3.png"]},
-  {id:25,img:"inosuke-fig.png",title:"inosuke action figure", subtitle:"DS",price:"799",category:"figures",subimg:[]},
-  {id:40,img:"action-figure1.jpg",title:"Giyu action figures",subtitle:"DS" ,price:"599",category:"figures",subimg:[]},
-  {id:5,img:"s-art-o-1.png",title:"Yuki Asuna Dress",subtitle:"others",price:3499,category:"women",subimg:["s-art-o-1.png","s-art-o-2.png","s-art-o-3.png"]},
-  {id:36,img:"aot-sword.png",title:"AOT scout Sword", subtitle:"DS",price:"2999",category:"others",subimg:[]},
+  {id:10,img:"nezuko.jpg",title:"Nezuko Kimono dress",subtitle:"Demon slayer",price:1999,category:"women",subimg:["nezuko.jpg","nezuko.jpg","nezuko.jpg"]},
+  {id:14,img:"naruto-1.jpg",title:"Naruto shippudin dress", subtitle:"naruto",price:"3499",category:"men",subimg:["naruto-1.jpg","naruto-2.jpg","naruto-3.jpg"]},
+  {id:25,img:"inosuke-fig.jpg",title:"inosuke action figure", subtitle:"Demon slayer",price:"799",category:"figures",subimg:[]},
+  {id:40,img:"action-figure1.jpg",title:"Giyu action figures",subtitle:"Demon slayer" ,price:"599",category:"figures",subimg:[]},
+  {id:5,img:"s-art-o-1.jpg",title:"Yuki Asuna Dress",subtitle:"others",price:3499,category:"women",subimg:["s-art-o-1.jpg","s-art-o-2.jpg","s-art-o-3.jpg"]},
+  {id:36,img:"aot-sword.jpg",title:"AOT scout Sword", subtitle:"Demon slayer",price:"2999",category:"others",subimg:[]},
 
 ]
 
@@ -264,14 +264,14 @@ newarrivals.forEach(data=>{
   newProduct.classList.add("newproduct-card")
 
   let productTitle = capitalizeWords(data.title);
-  let productSubtitle = capitalizeWords(data.subtitle);
+  let productsubtitle = capitalizeWords(data.subtitle);
 
   newProduct.innerHTML=`
   <div class="newproduct-image">
         <img src="images/${data.img}" alt="Nezuko">
       </div>
       <div class="newproduct-content">
-        <span>${productSubtitle}</span>
+        <span>${productsubtitle}</span>
         <h4>${productTitle}</h4>
       </div>
       <div class="badge">NEW</div>
@@ -303,59 +303,59 @@ if(!response.ok){
  */
 
 const shopItems =[
-  {id:1, img:"luffy-1.png",title:"Luffy classic dress", subtitle:"one piece",price:"4999",category:"men",subimg:["luffy-1.png","luffy-2.png","luffy-3.png"]},
-  {id:2,img:"zoro-1.png",title:"Zoro kimono dress ", subtitle:"one piece",price:"4999",category:"men",subimg:["zoro-1.png","zoro-2.png","zoro-1.png"]},
-  {id:3,img:"yuji-1.png",title:"Yuji itadori dress", subtitle:"jjk",price:"3999",category:"men",subimg:["yuji-1.png","yuji-2.png","yuji-3.png"]},
+  {id:1, img:"luffy-1.jpg",title:"Luffy classic dress", subtitle:"one piece",price:"4999",category:"men",subimg:["luffy-1.jpg","luffy-2.jpg","luffy-3.jpg"]},
+  {id:2,img:"zoro-1.jpg",title:"Zoro kimono dress ", subtitle:"one piece",price:"4999",category:"men",subimg:["zoro-1.jpg","zoro-2.jpg","zoro-1.jpg"]},
+  {id:3,img:"yuji-1.jpg",title:"Yuji itadori dress", subtitle:"jjk",price:"3999",category:"men",subimg:["yuji-1.jpg","yuji-2.jpg","yuji-3.jpg"]},
   
-  {id:4,img:"mitsuri-1.png",title:"mitsuri cosplay Dress",subtitle:"DS",price:3499,category:"women",subimg:["mitsuri-1.png","mitsuri-2.png","mitsuri-1.png"]},
-  {id:5,img:"s-art-o-1.png",title:"Yuki Asuna Dress",subtitle:"others",price:3499,category:"women",subimg:["s-art-o-1.png","s-art-o-2.png","s-art-o-3.png"]},
-  {id:6,img:"rem-1.png",title:"Rem cosplay Dress",subtitle:"Re zero",price:2499,category:"women",subimg:["rem-1.png","rem-2.png","rem-3.png"]},
+  {id:4,img:"mitsuri-1.jpg",title:"mitsuri cosplay Dress",subtitle:"Demon slayer",price:3499,category:"women",subimg:["mitsuri-1.jpg","mitsuri-2.jpg","mitsuri-1.jpg"]},
+  {id:5,img:"s-art-o-1.jpg",title:"Yuki Asuna Dress",subtitle:"others",price:3499,category:"women",subimg:["s-art-o-1.jpg","s-art-o-2.jpg","s-art-o-3.jpg"]},
+  {id:6,img:"rem-1.jpg",title:"Rem cosplay Dress",subtitle:"Re zero",price:2499,category:"women",subimg:["rem-1.jpg","rem-2.jpg","rem-3.jpg"]},
   
-  {id:7,img:"deku-1.png",title:"Midoria(deku) cosplay dress", subtitle:"mha",price:"3499",category:"men",subimg:["deku-1.png","deku-2.png","deku-1.png"]},
-  {id:8,img:"aastha-1.png",title:"Aastha black bull dress",subtitle:"AOT",price:2999,category:"men",subimg:["aastha-1.png","aastha-2.png","aastha-1.png"]},
-  {id:9,img:"kakashi-1.png",title:"Kakashi hatake cosplay dress", subtitle:"naruto",price:"3999",category:"men",subimg:["kakashi-1.png","kakashi-2.png","kakashi-1.png"]},
+  {id:7,img:"deku-1.jpg",title:"Midoria(deku) cosplay dress", subtitle:"mha",price:"3499",category:"men",subimg:["deku-1.jpg","deku-2.jpg","deku-1.jpg"]},
+  {id:8,img:"aastha-1.jpg",title:"Aastha black bull dress",subtitle:"AOT",price:2999,category:"men",subimg:["aastha-1.jpg","aastha-2.jpg","aastha-1.jpg"]},
+  {id:9,img:"kakashi-1.jpg",title:"Kakashi hatake cosplay dress", subtitle:"naruto",price:"3999",category:"men",subimg:["kakashi-1.jpg","kakashi-2.jpg","kakashi-1.jpg"]},
   
-  {id:10,img:"nezuko.png",title:"nezuko kimono dress",subtitle:"DS",price:1999,category:"women",subimg:["nezuko.png","nezuko.png","nezuko.png"]},
-  {id:11,img:"zerotwo-1.png",title:"zero-two full dress",subtitle:"DS",price:2499,category:"women",subimg:["zerotwo-1.png","zerotwo-2.png","zerotwo-1.png"]},
-  {id:12,img:"yamato-1.png",title:"yamato full dress",subtitle:"DS",price:3499,category:"women",subimg:["yamato-1.png","yamato-2.png","yamato-1.png"]},
+  {id:10,img:"nezuko.jpg",title:"nezuko kimono dress",subtitle:"Demon slayer",price:1999,category:"women",subimg:["nezuko.jpg","nezuko.jpg","nezuko.jpg"]},
+  {id:11,img:"zerotwo-1.jpg",title:"zero-two full dress",subtitle:"Demon slayer",price:2499,category:"women",subimg:["zerotwo-1.jpg","zerotwo-2.jpg","zerotwo-1.jpg"]},
+  {id:12,img:"yamato-1.jpg",title:"yamato full dress",subtitle:"Demon slayer",price:3499,category:"women",subimg:["yamato-1.jpg","yamato-2.jpg","yamato-1.jpg"]},
   
-  {id:13,img:"goku-1.png",title:"Goku classic dress", subtitle:"dragon ball",price:"4999",category:"men",subimg:["goku-1.png","goku-2.png","goku-1.png"]},
-  {id:14,img:"naruto-1.png",title:"Naruto shippudin dress", subtitle:"naruto",price:"3499",category:"men",subimg:["naruto-1.png","naruto-2.png","naruto-3.png"]},
-  {id:15,img:"zenitsu-3.png",title:"zenitsu kimono Dress",subtitle:"DS",price:3499,category:"men",subimg:["zenitsu-1.png","zenitsu-2.png","zenitsu-3.png"]},
+  {id:13,img:"goku-1.jpg",title:"Goku classic dress", subtitle:"dragon ball",price:"4999",category:"men",subimg:["goku-1.jpg","goku-2.jpg","goku-1.jpg"]},
+  {id:14,img:"naruto-1.jpg",title:"Naruto shippudin dress", subtitle:"naruto",price:"3499",category:"men",subimg:["naruto-1.jpg","naruto-2.jpg","naruto-3.jpg"]},
+  {id:15,img:"zenitsu-3.jpg",title:"zenitsu kimono Dress",subtitle:"Demon slayer",price:3499,category:"men",subimg:["zenitsu-1.jpg","zenitsu-2.jpg","zenitsu-3.jpg"]},
   
-  {id:16,img:"makima-1.png",title:"makima shirts and jeans combo",subtitle:"chainsaw",price:1999,category:"women",subimg:["makima-1.png","makima-2.png","makima-1.png"]},
-  {id:17,img:"shinobu.png",title:"Shinobu full Dress",subTitle:"DS",price:2999,category:"women",subimg:["shinobu.png","shinobu-2.png","shinobu-3.png"]},
-  {id:18,img:"mikasa.png",title:"mikasa scout dress",subTitle:"aot",price:2999,category:"women",subimg:[]},
+  {id:16,img:"makima-1.jpg",title:"makima shirts and jeans combo",subtitle:"chainsaw",price:1999,category:"women",subimg:["makima-1.jpg","makima-2.jpg","makima-1.jpg"]},
+  {id:17,img:"shinobu.jpg",title:"Shinobu full Dress",subtitle:"Demon slayer",price:2999,category:"women",subimg:["shinobu.jpg","shinobu-2.jpg","shinobu-3.jpg"]},
+  {id:18,img:"mikasa.jpg",title:"mikasa scout dress",subtitle:"aot",price:2999,category:"women",subimg:[]},
   
-  {id:19,img:"tanjiro-1.png",title:"tanjiro cosplay dress",subTitle:"DS",price:1999,category:"men",subimg:["tanjiro-1.png","tanjiro-2.png","tanjiro-1.png"]},
-  {id:20,img:"itachi.png",title:"Itachi akatsuki dress", subtitle:"naruto",price:"3499",category:"men",subimg:["itachi.png","itachi-2.png","itachi-3.png"]},
-  {id:21,img:"hinata-1.png",title:"Shoyu hinata jersey", subtitle:"haikyu",price:"2499",category:"men",subimg:["hinata-1.png","hinata-2.png","haikyu-shorts.png"]},
+  {id:19,img:"tanjiro-1.jpg",title:"tanjiro cosplay dress",subtitle:"Demon slayer",price:1999,category:"men",subimg:["tanjiro-1.jpg","tanjiro-2.jpg","tanjiro-1.jpg"]},
+  {id:20,img:"itachi.jpg",title:"Itachi akatsuki dress", subtitle:"naruto",price:"3499",category:"men",subimg:["itachi.jpg","itachi-2.jpg","itachi-3.jpg"]},
+  {id:21,img:"hinata-1.jpg",title:"Shoyu hinata jersey", subtitle:"haikyu",price:"2499",category:"men",subimg:["hinata-1.jpg","hinata-2.jpg","haikyu-shorts.jpg"]},
   
-  {id:22,img:"Minato-1.png",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men",subimg:["Minato-1.png","Minato-2.png","Minato-1.png"]},
-  {id:23,img:"mikey-2.png",title:"Mikey Toman Jacket",subtitle:"tokyo revengers",price:2499,category:"men",subimg:["mikey-2.png","mikey-1.png","mikey-2.png"]},
-  {id:24,img:"kageyama-1.png",title:"kageyama jersey 09", subtitle:"haikyu",price:"2499",category:"men",subimg:["kageyama-1.png","haikyu-shorts.png","kageyama-2.png"]},
+  {id:22,img:"Minato-1.jpg",title:"Hokage Dress",subtitle:"naruto",price:2499,category:"men",subimg:["Minato-1.jpg","Minato-2.jpg","Minato-1.jpg"]},
+  {id:23,img:"mikey-2.jpg",title:"Mikey Toman Jacket",subtitle:"tokyo revengers",price:2499,category:"men",subimg:["mikey-2.jpg","mikey-1.jpg","mikey-2.jpg"]},
+  {id:24,img:"kageyama-1.jpg",title:"kageyama jersey 09", subtitle:"haikyu",price:"2499",category:"men",subimg:["kageyama-1.jpg","haikyu-shorts.jpg","kageyama-2.jpg"]},
   
-  {id:25,img:"inosuke-fig.png",title:"inosuke action figure", subtitle:"DS",price:"799",category:"figures",subimg:[]},
-  {id:26,img:"luffy-fig.png",title:"inosuke action figure", subtitle:"DS",price:"699",category:"figures",subimg:[]},
-  {id:27,img:"law-fig.png",title:"inosuke action figure", subtitle:"one piece",price:"699",category:"figures",subimg:[]},
+  {id:25,img:"inosuke-fig.jpg",title:"inosuke action figure", subtitle:"Demon slayer",price:"799",category:"figures",subimg:[]},
+  {id:26,img:"luffy-fig.jpg",title:"inosuke action figure", subtitle:"Demon slayer",price:"699",category:"figures",subimg:[]},
+  {id:27,img:"law-fig.jpg",title:"inosuke action figure", subtitle:"one piece",price:"699",category:"figures",subimg:[]},
 
-  {id:28,img:"rengoku-fig.png",title:"Rengoku action figure", subtitle:"DS",price:"599",category:"figures",subimg:[]},
+  {id:28,img:"rengoku-fig.jpg",title:"Rengoku action figure", subtitle:"Demon slayer",price:"599",category:"figures",subimg:[]},
   {id:29,img:"yamato-figure.jpg",title:"yamato cute figure", subtitle:"one piece",price:"599",category:"figures",subimg:[]},
-  {id:30,img:"zenitsu-fig.png",title:"zenitsu cool figure", subtitle:"DS",price:"799",category:"figures",subimg:[]},
+  {id:30,img:"zenitsu-fig.jpg",title:"zenitsu cool figure", subtitle:"Demon slayer",price:"799",category:"figures",subimg:[]},
 
-  {id:31,img:"inosuke-mask.png",title:"inosuke real Mask", subtitle:"DS",price:"3999",category:"others",subimg:[]},
-  {id:32,img:"water-blade.png",title:"water-braething Katana", subtitle:"DS",price:"2999",category:"others",subimg:[]},
-  {id:33,img:"ichigo-blade.png",title:"ichigo Sword from bleach", subtitle:"bleach",price:"2999",category:"others",subimg:[]},
-  {id:34,img:"zenitsu-katana.png",title:"zenitsu thunder katana", subtitle:"DS",price:"2999",category:"others",subimg:[]},
-  {id:35,img:"shinobu-katana.png",title:"shinobu katana", subtitle:"DS",price:"2999",category:"others",subimg:[]},
-  {id:36,img:"aot-sword.png",title:"AOT scout Sword", subtitle:"DS",price:"2999",category:"others",subimg:[]},
-  {id:37,img:"zoro-katanas.png",title:"zoro all three katanas", subtitle:"one piece",price:"2999",category:"others",subimg:["wado-ichimonji.png","enma.png","zoro-katana-2.png"]},
-  {id:38,img:"enma.png",title:"Enma Katana", subtitle:"one piece",price:"2999",category:"others",subimg:[]},
-  {id:39,img:"wado-ichimonji.png",title:"Wado Ichimonji", subtitle:"one piece",price:"2999",category:"others",subimg:[]},
-  {id:40,img:"obito-mask.png",title:"Obito mask", subtitle:"naruto",price:"2999",category:"others",subimg:[]},
+  {id:31,img:"inosuke-mask.jpg",title:"inosuke real Mask", subtitle:"Demon slayer",price:"3999",category:"others",subimg:[]},
+  {id:32,img:"water-blade.jpg",title:"water-braething Katana", subtitle:"Demon slayer",price:"2999",category:"others",subimg:[]},
+  {id:33,img:"ichigo-blade.jpg",title:"ichigo Sword from bleach", subtitle:"bleach",price:"2999",category:"others",subimg:[]},
+  {id:34,img:"zenitsu-katana.jpg",title:"zenitsu thunder katana", subtitle:"Demon slayer",price:"2999",category:"others",subimg:[]},
+  {id:35,img:"shinobu-katana.jpg",title:"shinobu katana", subtitle:"Demon slayer",price:"2999",category:"others",subimg:[]},
+  {id:36,img:"aot-sword.jpg",title:"AOT scout Sword", subtitle:"Demon slayer",price:"2999",category:"others",subimg:[]},
+  {id:37,img:"zoro-katanas.jpg",title:"zoro all three katanas", subtitle:"one piece",price:"2999",category:"others",subimg:["wado-ichimonji.jpg","enma.jpg","zoro-katana-2.jpg"]},
+  {id:38,img:"enma.jpg",title:"Enma Katana", subtitle:"one piece",price:"2999",category:"others",subimg:[]},
+  {id:39,img:"wado-ichimonji.jpg",title:"Wado Ichimonji", subtitle:"one piece",price:"2999",category:"others",subimg:[]},
+  {id:40,img:"obito-mask.jpg",title:"Obito mask", subtitle:"naruto",price:"2999",category:"others",subimg:[]},
 
 
-  {id:41,img:"action-figure1.jpg",title:"Giyu action figures",subtitle:"DS" ,price:"599",category:"figures",subimg:[]},
+  {id:41,img:"action-figure1.jpg",title:"Giyu action figures",subtitle:"Demon slayer" ,price:"599",category:"figures",subimg:[]},
   {id:42,img:"goku-figure.jpg",title:"Goku action figure", subtitle:"Dragon ball",price:"599",category:"figures",subimg:[]},
   {id:43,img:"DB-figure.jpg",title:"Dragon Ball action figure", subtitle:"Dragon ball",price:"499",category:"figures",subimg:[]},
   {id:44,img:"rem-figure.jpg",title:"Rem action figure", subtitle:"Re:Zero",price:"499",category:"figures",subimg:[]},
@@ -528,7 +528,7 @@ items.slice(start,end).forEach(item=>{
   itemCard.classList.add("item-card")
 
   let random = Math.floor(Math.random()*(7999-5999 +1))+5999;
-  let productSubtitle = capitalizeWords(item.subtitle);
+  let productsubtitle = capitalizeWords(item.subtitle);
   let productTitle = capitalizeWords(item.title);
 
   itemCard.innerHTML=`
@@ -537,7 +537,7 @@ items.slice(start,end).forEach(item=>{
                   </div>
                 
                 <div class="item-content">
-                  <span>${productSubtitle}</span>
+                  <span>${productsubtitle}</span>
                   <h4>${productTitle}</h4>
                   <div class="star">
                   <i class="fas fa-star"></i>
@@ -649,8 +649,9 @@ function initProductPage(){
      }
    }
   })
-if(product.category==="figures"){
+if(product.category==="figures"||product.category==="others"){
   document.querySelector(".size").style.display="none"
+  document.querySelector(".product-subimages").style.display="none"
 }
 
   const brand = document.querySelector(".prod-details span")
